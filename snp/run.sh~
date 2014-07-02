@@ -1,2 +1,0 @@
-g++ -g main.cpp ../server/server.cpp -o snp -lboost_system -lpthread
-./snp 1234 .
