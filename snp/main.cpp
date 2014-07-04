@@ -237,7 +237,7 @@ private:
 
 
 const int WELL_PACKED_VECTOR_SIZE = 16777216;
-bool DEBUG = true;
+bool DEBUG = false;
 
 class TSNP_DB {
 public:
@@ -355,7 +355,7 @@ void http::server::request_handler::handle_request(const request& req, reply& re
 			responseString.append(responses[respIndex].FirstAllele + " " + responses[respIndex].SecondAllele);
 			responseString.append("\n");
 		}
-		responseString += "\n";
+		responseString += "=====\n";
 	}
 
 	// Fill out the reply to be sent to the client.
