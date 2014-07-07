@@ -196,9 +196,9 @@ public:
 					const char* currentCharPtr = line.c_str();
 					while (*currentCharPtr != 0) {
 						char code = base2Code(*currentCharPtr);
-						(*currentIndexPtr)[vectorPosition++] = (bool)((code << 5) >> 7);
-						(*currentIndexPtr)[vectorPosition++] = (bool)((code << 6) >> 7);
-						(*currentIndexPtr)[vectorPosition++] = (bool)((code << 7) >> 7);
+						(*currentIndexPtr)[vectorPosition++] = (bool)((char)(code << 5) >> 7);
+						(*currentIndexPtr)[vectorPosition++] = (bool)((char)(code << 6) >> 7);
+						(*currentIndexPtr)[vectorPosition++] = (bool)((char)(code << 7) >> 7);
 						++currentCharPtr;
 					}
 				}
